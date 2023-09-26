@@ -10,28 +10,85 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: #444444;
   background: var(--navabarcolor, #242222);
 }
+/* Regular weight */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('fonts/static/PlusJakartaSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
+/* Medium weight */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('fonts/static/PlusJakartaSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Bold weight */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('fonts/static/PlusJakartaSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "THICCCBOI";
+  src: url('fonts/fonts/TTF/THICCCBOI-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/* You can continue adding more @font-face rules for other weights and styles */
+
+/*@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('fonts/static/PlusJakartaSans-Regular.ttf') format('sans-serif'),
+       url('fonts/static/PlusJakartaSans-Bold.ttf') format('woff'),
+       url('fonts/static/PlusJakartaSans-ExtraLight.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-Light.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-Regular.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-Medium.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-SemiBold.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-Bold.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-ExtraBold.ttf') format('woff2'),
+       url('fonts/ static/PlusJakartaSans-ExtraLightItalic.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-LightItalic.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-Italic.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-MediumItalic.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-SemiBoldItalic.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-BoldItalic.ttf') format('woff2'),
+       url('fonts/static/PlusJakartaSans-ExtraBoldItalic.ttf') format('woff2');
+  font-weight: 400; 
+  font-style: normal;
+}*/
 a {
   color: #ffb727;
   text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
 }
 
 a:hover {
   color: #FC1D63;
   text-decoration: none;
+
 }
 
+
 h1,
-h2,
 h3,
+h2,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -336,21 +393,30 @@ h6 {
 
 #hero h1 {
   color: var(--button-color, #FC1D63);
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 500; /* Medium weight */
+  line-height: 150%; /* 52.5px */
+  letter-spacing: -1.05px;
 }
 
 #hero h2 {
   color: var(--Second-color, #FFF);
-  font-size: 3rem;
+  font-family: "Plus Jakarta Sans";
+  font-size: 50px;
+  font-style: normal;
   font-weight: 700;
-  margin-bottom: 20px;
+  line-height: 132.5%; /* 66.25px */
+  letter-spacing: -1.5px;
 }
+
 
 #hero p {
   color: #CBBFBF;
   font-size: 1.5rem;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 400; /* Regular weight */
   margin-bottom: 30px;
 }
 
@@ -401,14 +467,16 @@ h6 {
 
   #hero h1 {
     font-size: 1.8rem;
-    margin: 200px 0 0 0; /* Reduce the top margin and add a bit of bottom margin for spacing */
-    text-align: center; /* Center align the text */
-  }
+    margin: 40vh 0 0 0; /* Use viewport height for top margin and rem for bottom margin */
+    text-align: center;    /* Center align the text */
+}
+
 
   #hero h2 {
     font-size: 2rem; /* Slightly reduced for better fit on mobile */
     text-align: center;
-    margin-bottom: 20px; /* Consistent spacing */
+    margin-bottom: 20px;
+     /* Consistent spacing */
   }
 
   #hero p {
@@ -503,10 +571,14 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  margin: 20px;
+  font-size: 40px;
+  font-style: normal;
   font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+  line-height: 20px; /* 50% */
+  letter-spacing: -1.2px;
+  color: var(--Second-color, #FFF);
+  font-family: "Plus Jakarta Sans";
   padding-bottom: 0;
   color: #3b434a;
   position: relative;
@@ -797,6 +869,7 @@ section {
   background: var(--navabarcolor, #242222);  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
   transition: all 0.3s ease-in-out;
   text-align: center;
+
   border-radius: 16px;
   border: 2px solid rgba(255, 241, 241, 0.04);
   box-shadow: 0px 6px 10px 0px rgba(73, 73, 73, 0.25);}
@@ -969,273 +1042,6 @@ letter-spacing: -1.2px;
 }
 
 /*--------------------------------------------------------------
-# My Portfolio
---------------------------------------------------------------*/
-.portfolio #portfolio-flters {
-  list-style: none;
-  margin-bottom: 20px;
-}
-
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 10px 10px 10px;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1;
-  padding: 7px 10px;
-  text-transform: uppercase;
-  color: #444444;
-  transition: all 0.3s ease-in-out;
-  border: 2px solid #fff;
-}
-
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  color: #FC1D63;
-  border-color: #FC1D63;
-}
-
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-
-.portfolio .portfolio-item .portfolio-img {
-  overflow: hidden;
-}
-
-.portfolio .portfolio-item .portfolio-img img {
-  transition: all 0.8s ease-in-out;
-}
-
-.portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  left: 15px;
-  bottom: 0;
-  z-index: 3;
-  right: 15px;
-  transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 15px;
-}
-
-.portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  color: #fff;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 0px;
-}
-
-.portfolio .portfolio-item .portfolio-info p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 40px;
-  font-size: 24px;
-  top: calc(50% - 18px);
-  color: #fff;
-  transition: 0.3s;
-}
-
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #FC1D63;
-}
-
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 10px;
-}
-
-.portfolio .portfolio-item:hover .portfolio-img img {
-  transform: scale(1.2);
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-.portfolio-details .portfolio-details-slider img {
-  width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #FC1D63;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #FC1D63;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(59, 67, 74, 0.08);
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li+li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
-
-/*--------------------------------------------------------------
-# Pricing
---------------------------------------------------------------*/
-.pricing .box {
-  padding: 20px;
-  background: #fff;
-  text-align: center;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.pricing h3 {
-  font-weight: 400;
-  margin: -20px -20px 20px -20px;
-  padding: 20px 15px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #777777;
-  background: #f8f8f8;
-}
-
-.pricing h4 {
-  font-size: 36px;
-  color: #FC1D63;
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 20px;
-}
-
-.pricing h4 sup {
-  font-size: 20px;
-  top: -12px;
-  left: -3px;
-}
-
-.pricing h4 span {
-  color: #bababa;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing ul {
-  padding: 0;
-  list-style: none;
-  color: #444444;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing ul li {
-  padding-bottom: 16px;
-}
-
-.pricing ul i {
-  color: #FC1D63;
-  font-size: 18px;
-  padding-right: 4px;
-}
-
-.pricing ul .na {
-  color: #ccc;
-  text-decoration: line-through;
-}
-
-.pricing .btn-wrap {
-  margin: 20px -20px -20px -20px;
-  padding: 20px 15px;
-  background: #f8f8f8;
-  text-align: center;
-}
-
-.pricing .btn-buy {
-  background: #FC1D63;
-  display: inline-block;
-  padding: 8px 35px;
-  border-radius: 4px;
-  color: #fff;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.pricing .btn-buy:hover {
-  background: #FC1D63;
-}
-
-.pricing .featured h3 {
-  color: #fff;
-  background: #FC1D63;
-}
-
-.pricing .advanced {
-  width: 200px;
-  position: absolute;
-  top: 18px;
-  right: -68px;
-  transform: rotate(45deg);
-  z-index: 1;
-  font-size: 14px;
-  padding: 1px 0 3px 0;
-  background:#FC1D63;
-  color: #fff;
-}
-
 /*--------------------------------------------------------------
 # Contact Me
 --------------------------------------------------------------*/
@@ -1264,34 +1070,20 @@ letter-spacing: -1.2px;
 }
 .contact p{
   color: var(--Second-color, #FFF);
-font-family: "THICCCBOI";
-font-size: 22px;
-font-style: normal;
-font-weight: 500;
-line-height: 36px; /* 163.636% */
+  font-family: "THICCCBOI";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 163.636% */
 }
-.contact .facebook{ 
-  color: var(--Second-color, #FFF);
-font-family: "THICCCBOI";
-margin: 0 30px 0  0;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 40px; /* 166.667% */
 
-}
-.contact .linked-in { 
-  color: var(--Second-color, #FFF);
-font-family: "THICCCBOI";
-margin: 0 30px 0  0;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: 40px; /* 166.667% */
-
-}
 .contact .mr-2{
-  margin: 0 30px 0  0;
+  color: var(--Second-color, #FFF);
+font-family: THICCCBOI;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 40px; /* 166.667% */
 
 }
 .contact .info-box i.bx {
@@ -1299,7 +1091,7 @@ line-height: 40px; /* 166.667% */
   color: #FC1D63;
   border-radius: 50%;
   padding: 15px;
-  background: #fff6e4;
+  background: #faf9f6;
 }
 
 .contact .info-box h3 {
@@ -1395,15 +1187,30 @@ line-height: 40px; /* 166.667% */
 
 .contact .php-email-form input,
 .contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
+    background: var(--navabarcolor, #242222);
+    color: #D0D5DD;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 8px;
+    border: 1px solid #3C3C3C;
+    padding: 12px 15px;  /* Adjusting padding for better look */
+    margin-bottom: 20px;  /* Spacing between fields */
+    transition: border-color 0.3s, box-shadow 0.3s;  /* Smooth transition effects */
 }
 
 .contact .php-email-form input:focus,
 .contact .php-email-form textarea:focus {
-  background-color: #f0e7ea;
+    border-color: #FC1D63;  /* Highlight border color when focused */
+    box-shadow: 0 0 10px rgba(252, 29, 99, 0.2);  /* Adding a subtle shadow when focused */
 }
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
+    color: rgba(208, 213, 221, 0.7);  /* Making it slightly transparent */
+}
+
 
 .contact .php-email-form input {
   display: flex;
@@ -1415,37 +1222,74 @@ line-height: 40px; /* 166.667% */
   border-radius: 8px;
   border: 1px solid #3C3C3C;}
 
+/* Input and Textarea Styles */
+.contact .php-email-form input,
 .contact .php-email-form textarea {
-  display: flex;
-  height: 126px;
-  padding: 12px 10px 10px 14px;
-  align-items: flex-start;
-  gap: 18px;
-  align-self: stretch;
-  border-radius: 8px;
-  border: 1px solid #3C3C3C;
+    /* Input and Textarea Styles */
+
+    background: var(--navabarcolor, #242222);
+    border-radius: 8px;
+    border: 1px solid #3C3C3C;
+    color: #D0D5DD;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 10px 15px; /* added padding for better appearance */
 }
 
+
+
+/* Input Title Styles */
+.contact .php-email-form label {
+  display: block;
+  color: var(--stroke-color, rgba(255, 255, 255, 0.50));
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  margin-bottom: 8px;  /* Small space between label and input */
+}
+
+
+
 .contact .php-email-form button[type=submit] {
-  background: #FC1D63;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 5px;
+  display: flex;
+  width: 800px;
+  max-width: 100%; /* Ensures the button never exceeds the parent's width */
+  height: 44px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: var(--Second-color, #FFF);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  border: none;  /* Removing the default border */
+  cursor: pointer;
+  background-color: #FC1D63;  /* Giving it a default background color */
+  transition: background-color 0.3s, transform 0.2s;  /* Smooth transition effects */
+  border-radius: 8px;  /* Rounded corners */
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #FC1D63;
+  background-color: #e51653;  /* Slightly darker shade for hover */
 }
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
+.btn.btn-primary:active {
+  transform: scale(0.98);  /* Slight scaling to give a "pressed" effect */
+}
 
-  100% {
-    transform: rotate(360deg);
+/* Responsive behavior */
+@media (max-width: 420px) {
+  .contact .php-email-form button[type=submit]{
+      width: 100%;  /* Full width on smaller screens */
   }
 }
 /*--------------------------------------------------------------
