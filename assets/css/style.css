@@ -1323,6 +1323,10 @@ line-height: 40px; /* 166.667% */
   transform: scale(0.98);  /* Slight scaling to give a "pressed" effect */
 }
 
+#submitBtn .spinner-border {
+  margin-left: 8px;
+}
+
 /* Responsive behavior */
 @media (max-width: 420px) {
   .contact .php-email-form button[type=submit]{

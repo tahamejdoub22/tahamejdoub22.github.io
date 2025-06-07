@@ -32,6 +32,10 @@
     const form = document.getElementById("contactForm");
     const toastEl = document.getElementById("successToast");
     const toast = new bootstrap.Toast(toastEl);
+    const submitBtn = document.getElementById("submitBtn");
+    const spinner = submitBtn.querySelector('.spinner-border');
+    const btnText = submitBtn.querySelector('.button-text');
+
 
     const showError = (input, message) => {
         const feedback = input.parentElement.querySelector('.invalid-feedback');
@@ -79,6 +83,11 @@
 
         if (hasError) return;
 
+        submitBtn.disabled = true;
+        spinner.classList.remove('d-none');
+        btnText.textContent = 'Sending...';
+
+
         const formData = new FormData(form);
         const jsonData = {};
         formData.forEach((value, key) => {
@@ -105,6 +114,11 @@
             }
         } catch (error) {
             document.querySelector(".error-message").textContent = "An error occurred. Please try again later.";
+        } finally {
+            submitBtn.disabled = false;
+            spinner.classList.add('d-none');
+            btnText.textContent = 'Send Message';
+
         }
     });
   };
@@ -349,7 +363,12 @@
                           <div class="error-message"></div>
                           <div class="sent-message">Your message has been sent. Thank you!</div>
                       </div>
-                      <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
+                      <div class="text-center">
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                          <span class="button-text">Send Message</span>
+                          <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        </button>
+                      </div>
                   </form>
               </div>
           </div>
@@ -372,7 +391,8 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Toast container -->
-  <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 11">
+
     <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
         <div class="toast-body">
