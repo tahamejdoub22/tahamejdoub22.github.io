@@ -1264,6 +1264,18 @@ line-height: 40px; /* 166.667% */
     padding: 10px 15px; /* added padding for better appearance */
 }
 
+.contact .invalid-feedback {
+    display: none;
+    color: #ed3c0d;
+    font-size: 13px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.contact .form-control.is-invalid {
+    border-color: #ed3c0d;
+}
+
 
 
 /* Input Title Styles */
