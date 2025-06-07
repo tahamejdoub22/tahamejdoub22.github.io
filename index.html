@@ -36,6 +36,7 @@
     const spinner = submitBtn.querySelector('.spinner-border');
     const btnText = submitBtn.querySelector('.button-text');
 
+
     const showError = (input, message) => {
         const feedback = input.parentElement.querySelector('.invalid-feedback');
         if (feedback) {
@@ -86,6 +87,7 @@
         spinner.classList.remove('d-none');
         btnText.textContent = 'Sending...';
 
+
         const formData = new FormData(form);
         const jsonData = {};
         formData.forEach((value, key) => {
@@ -116,6 +118,7 @@
             submitBtn.disabled = false;
             spinner.classList.add('d-none');
             btnText.textContent = 'Send Message';
+
         }
     });
   };
@@ -389,6 +392,7 @@
 
   <!-- Toast container -->
   <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 11">
+
     <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
         <div class="toast-body">
